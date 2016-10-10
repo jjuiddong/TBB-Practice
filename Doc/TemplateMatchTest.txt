@@ -1,0 +1,40 @@
+
+
+Single Thread
+	- loop 10
+		- debug : 4024
+		- release : 2160
+
+
+c++ Thread
+	- loop 10
+		- debug : 1314
+		- release : 820 ~ 920
+
+
+c++ TBB
+	- loop 10
+		- debug : 1527
+		- release : 870
+
+
+----------------------------------------------------------
+
+Single Thread
+	- loop 100
+		- debug : 38274
+		- release : 20269
+
+
+c++ Thread
+	- loop 100
+		- debug : 12123
+		- release : ????
+
+
+c++ TBB
+	- loop 100
+		- debug : 13147
+		- release : 8970
+
+
