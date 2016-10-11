@@ -38,3 +38,25 @@ c++ TBB
 		- release : 8970
 
 
+
+----------------------------------------------------------
+OpenCV Compile With TBB
+
+Single Thread
+	- loop 100
+		- debug : 38284
+		- release : 20000
+
+
+c++ Thread
+	- loop 100
+		- debug : 12961
+		- release : 8754
+
+
+c++ TBB
+	- loop 100
+		- debug : 13146
+		- release : 8475
+
+
