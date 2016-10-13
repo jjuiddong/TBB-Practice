@@ -1,5 +1,4 @@
-// templatematch normal
-//
+
 #include <stdio.h>
 #include <windows.h>
 #include <mmsystem.h>
@@ -30,15 +29,20 @@ void main()
 	Mat input = imread("srcimg.jpg");
 	Mat matObj = imread("temp.jpg");
 
+	UMat uinput;
+	uinput = input.getUMat(cv::ACCESS_READ);
+	UMat uobj;
+	uobj = matObj.getUMat(cv::ACCESS_READ);
+
 	const cv::Size csize(input.cols - matObj.cols + 1, input.rows - matObj.rows + 1);
 	Point left_top;
 	double min = 0, max = 0;
-	Mat matResult(csize, IPL_DEPTH_32F);
+	UMat matResult(csize, IPL_DEPTH_32F);
 
 	const int t1 = timeGetTime();
 	for (int i = 0; i < 100; ++i)
 	{
-		cv::matchTemplate(input, matObj, matResult, CV_TM_CCOEFF_NORMED);
+		cv::matchTemplate(uinput, uobj, matResult, CV_TM_CCOEFF_NORMED);
 		cv::minMaxLoc(matResult, &min, &max, NULL, &left_top);
 		cout << "ok" << endl;
 	}

@@ -1,4 +1,5 @@
 
+ 10 loop
 
 Single Thread
 	- loop 10
@@ -19,6 +20,7 @@ c++ TBB
 
 
 ----------------------------------------------------------
+ 100 loop
 
 Single Thread
 	- loop 100
@@ -58,5 +60,48 @@ c++ TBB
 	- loop 100
 		- debug : 13146
 		- release : 8475
+
+
+----------------------------------------------------------
+OpenCV Compile With OpenCL
+
+Single Thread
+	- loop 100
+		- debug : 26000
+		- release : 17101
+
+
+c++ Thread
+	- loop 100
+		- debug : ??
+		- release : ??
+
+
+c++ TBB
+	- loop 100
+		- debug : 12126
+		- release : 8400
+
+
+
+----------------------------------------------------------
+OpenCV Compile With CUDA
+
+Single Thread
+	- loop 100
+		- debug : 6705
+		- release : 6400
+
+
+c++ Thread
+	- loop 100
+		- debug : ??
+		- release : ??
+
+
+c++ TBB
+	- loop 100
+		- debug : ??
+		- release : 6888
 
 
